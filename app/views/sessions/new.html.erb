@@ -1,0 +1,17 @@
+<h1>ログインページ</h1>
+
+<%= form_with scope: :session, local: true do |f| %>
+  <%= f.label :name %>
+    <li>
+      <%= f.text_field :name %>
+    </li>
+  <%= f.label :password %>
+    <li>
+      <%= f.password_field :password %>
+    </li>
+  <%= f.label :password_confirmation, "Confirmation" %>
+    <li>
+      <%= f.password_field :password_confirmation %>
+    </li>
+    <%= f.submit "Log in", class: "btn btn-primary" %>
+<% end %>
